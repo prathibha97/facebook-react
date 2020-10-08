@@ -5,9 +5,10 @@ import Header from "./components/Header";
 import Login from "./components/Login";
 import Sidebar from "./components/Sidebar";
 import Widget from "./components/Widget";
+import { useStateValue } from "./context/StateProvider";
 
 function App() {
-  const user = null;
+  const [{user}] = useStateValue();
   return (
     <div className='app'>
       {!user ? (

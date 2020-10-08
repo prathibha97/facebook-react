@@ -12,9 +12,11 @@ import {
   SupervisedUserCircle,
 } from "@material-ui/icons";
 import React from "react";
+import { useStateValue } from "../context/StateProvider";
 import "../css/Header.css";
 
 function Header() {
+  const [{ user }] = useStateValue();
   return (
     <div className='header'>
       <div className='header__left'>
@@ -24,7 +26,7 @@ function Header() {
         />
         <div className='header__input'>
           <Search />
-          <input type='text' placeholder='Search Facebook'/>
+          <input type='text' placeholder='Search Facebook' />
         </div>
       </div>
       <div className='header__center'>
@@ -46,8 +48,8 @@ function Header() {
       </div>
       <div className='header__right'>
         <div className='header__info'>
-          <Avatar />
-          <h4>prathibz97</h4>
+          <Avatar src={user?.photoURL}/>
+          <h4>{user?.displayName}</h4>
         </div>
         <IconButton>
           <Add />
