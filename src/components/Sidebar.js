@@ -1,4 +1,4 @@
-import { Chat, EmojiFlags, ExpandMore, ExpandMoreOutlined, LocalHospital, People, Storefront, VideoLibrary } from "@material-ui/icons";
+import { Chat, EmojiFlags, ExpandMoreOutlined, LocalHospital, People, Storefront, VideoLibrary } from "@material-ui/icons";
 import React from "react";
 import "../css/Sidebar.css";
 import SidebarRow from "./SidebarRow";
