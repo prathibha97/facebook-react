@@ -1,4 +1,4 @@
-import React, { createContext, useReducer } from "react";
+import React, { createContext, useContext, useReducer } from "react";
 
 export const stateContext = createContext();
 
@@ -8,4 +8,4 @@ export const StateProvider = ({ reducer, initialState, children }) => (
   </stateContext.Provider>
 );
 
-export const useStateValue = stateContext();
+export const useStateValue = () => useContext(stateContext);
