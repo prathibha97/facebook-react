@@ -1,11 +1,17 @@
 import { Button } from "@material-ui/core";
 import React from "react";
 import "../css/Login.css";
+import { auth, provider } from "../firebase";
 
 function Login() {
-    const signIn =()=>{
-        
-    }
+  const signIn = () => {
+    auth
+      .signInWithPopup(provider)
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((err) => alert(err.message));
+  };
   return (
     <div className='login'>
       <div className='login__logo'>
@@ -18,7 +24,9 @@ function Login() {
           alt=''
         />
       </div>
-      <Button type='submit' onClick={signIn}>Sign In</Button>
+      <Button type='submit' onClick={signIn}>
+        Sign In
+      </Button>
     </div>
   );
 }
