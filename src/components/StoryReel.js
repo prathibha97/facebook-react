@@ -1,9 +1,10 @@
 import React from 'react'
 import '../css/StoryReel.css'
+import Story from './Story'
 function StoryReel() {
     return (
         <div className='storyReel'>
-            
+            <Story/>
         </div>
     )
 }
